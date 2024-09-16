@@ -68,8 +68,8 @@ cout    << "Data Type: unsigned int; Size: 4 bytes; min range:: 0; max range:: 4
 
     cout    << "Data Type: short; Size: 2 byte; min range:–32768 ; max range:32767\n"<< endl;
 
-    long i = 20000;
-    long kk = -1999;
+    short i = 20000;
+    short kk = -1999;
 
     cout << "I = 20000, KK =-1999, I - K =" << i+kk << "\n" << endl;
 
