@@ -66,6 +66,15 @@ cout    << "Data Type: unsigned int; Size: 4 bytes; min range:: 0; max range:: 4
 
     cout << "Z = 20000000, W =-19999999, Z - W =" << z-w << "\n" << endl;
 
+    cout    << "Data Type: short; Size: 2 byte; min range:–32768 ; max range:32767\n"<< endl;
+
+    long i = 20000;
+    long kk = -1999;
+
+    cout << "I = 20000, KK =-1999, I - K =" << i+kk << "\n" << endl;
+
+
+
 
     return 0;
 
