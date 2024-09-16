@@ -5,7 +5,7 @@ using namespace std;
 // 1231
 /// @return 
 
-// aaaaaaqaaaa11111
+// aaaaaaqaaaa11111222
 int main() {
     cout << "Data Type: int; Size: 4 bytes; min range:: -2*10^9 ; max range:: 2*10^9\n" << endl;
     int a = 10;
