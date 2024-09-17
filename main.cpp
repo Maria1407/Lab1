@@ -5,7 +5,7 @@ using namespace std;
 // 1231
 /// @return 
 
-// aaaaaaqaaaa11111222
+
 int main() {
     cout << "Data Type: int; Size: 4 bytes; min range:: -2*10^9 ; max range:: 2*10^9\n" << endl;
     int a = 10;
@@ -59,7 +59,7 @@ cout    << "Data Type: unsigned int; Size: 4 bytes; min range:: 0; max range:: 4
 
     cout << "Q = 11.111,  R = 12.222, Q + R =" << q+r << endl;
 
-    cout    << "Data Type: long; Size: 4 or 8 byte; 4: min range:−2 147 483 648 ; max range:2 147 483 647; 8: min range:-9 223 372 036 854 775 808; max range:+9 223 372 036 854 775 807 \n"<< endl;
+    cout    << "Data Type: long; Size: 4 or 8 byte; 4: min range:-2 147 483 648 ; max range:2 147 483 647; 8: min range:-9 223 372 036 854 775 808; max range:+9 223 372 036 854 775 807 \n"<< endl;
 
     long z = 20000000;
     long w = -19999999;
