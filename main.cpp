@@ -94,7 +94,6 @@ int main() {
     float num1 = 1.23E-4;
     float num2 = 3.65E+6;
 
-    cout << "NUM1 = 1.23E-4, NUM2 = 2.15E+6, NUM1 + NUM2 =" << num1 + num2 << "\n" << endl;
 
     return 0;
 
