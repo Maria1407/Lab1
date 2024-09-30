@@ -28,5 +28,23 @@ int main()
             }
         }
     }
-    cout << sum << " " << size_max << " " << num_max;
+    cout << sum << " " << size_max << " " << num_max << endl;
+    
+    
+    
+    
+    int N;
+    int SUM = 0;
+ 
+    cout << "Enter n = ";
+    cin >> N;
+ 
+    while (N!=0)
+    {
+        SUM += N%10;
+        N /= 10;
+    }
+    cout << "sum = " << SUM << endl;
+    
+    return 0;
 }
