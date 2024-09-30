@@ -62,11 +62,11 @@ int main() {
     cin >> num;
 
     if (num > 0){
-        cout << num << "Positive number." << endl;
+        cout << num << " - Positive number." << endl;
     }
     
     else {
-        cout << num << "Negative number." << endl;
+        cout << num << " - Negative number." << endl;
     }
  
     return 0;
