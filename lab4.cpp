@@ -11,7 +11,7 @@ int main() {
     if ((A % C==0) & (B % C == 0)) { 
         cout << (A+B)/C << "\n" << endl;
     } 
-    if ((A % C==0) & (B % C != 0)) { 
+    else if ((A % C==0) & (B % C != 0)) { 
         cout << A/C+B << "\n" << endl;
     } 
     else {
