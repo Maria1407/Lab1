@@ -1,60 +1,79 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <ctime>
+#include <cstdlib>
+ 
+using namespace std;
+ 
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    int temp = 0, num1 = 0, num2 = 0;
+    bool flag = false;
 
-// Функция для получения первой цифры числа
-int getFirstDigit(int num) {
-    while (num >= 10) {
-        num /= 10;
+    const int n = 6;
+    // cin >> n;
+    int arr[n] {};
+
+    for (int i = 0; i < n; i++) {
+        int number;
+        cin >> number;
+
+        arr[i] = number;
     }
-    return num;
-}
 
-// Функция для получения суммы цифр числа
-int getDigitSum(int num) {
-    int sum = 0;
-    while (num > 0) {
-        sum += num % 10;
-        num /= 10;
-    }
-    return sum;
-}
+    // ��������� 
 
-// Функция для сравнения двух чисел по заданным условиям
-bool compareNumbers(int a, int b) {
-    int firstDigitA = getFirstDigit(a);
-    int firstDigitB = getFirstDigit(b);
-    if (firstDigitA == firstDigitB) {
-        int sumA = getDigitSum(a);
-        int sumB = getDigitSum(b);
-        if (sumA == sumB) {
-            return a <= b;
-        } else {
-            return sumA <= sumB;
+    for (int i = 0; i < n - 1; ++i)
+    {
+        for (int j = 0; j < n - i - 1; ++j)
+        {
+            if (arr[j] > arr[j+1])
+            {
+                temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
         }
-    } else {
-        return firstDigitA <= firstDigitB;
-    }
-}
-
-int main() {
-    int n;
-    std::cout << "Введите количество чисел (n <= 1000): ";
-    std::cin >> n;
-
-    std::vector<int> numbers(n);
-    std::cout << "Введите " << n << " натуральных чисел: ";
-    for (int i = 0; i < n; ++i) {
-        std::cin >> numbers[i];
     }
 
-    std::sort(numbers.begin(), numbers.end(), compareNumbers);
-
-    std::cout << "Отсортированная последовательность:" << std::endl;
-    for (int num : numbers) {
-        std::cout << num << " ";
+    // for (int i = 0; i < n; ++i)
+    //     cout << arr[i] << " ";
+    
+    // �������� ���� �� ����������
+    for (int i = 0; i < n - 1; ++i)
+    {
+        for (int j = 0; j < n - 1; ++j)
+        {
+            if (arr[j] == arr[j+1])
+            {
+                flag = true;
+                break;
+            }
+        }
     }
-    std::cout << std::endl;
-
-    return 0;
+    cout << "\n";
+    if (flag) {
+        for (int i = 0; i < n - 1; ++i)
+        {
+            for (int j = 0; j < n - 1; ++j)
+            {
+                num1 = arr[j] % 10;
+                num2 = arr[j+1] % 10;
+                if (num1 < num2)
+                {
+                    temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+        
+    else
+    {
+        cout << "We does not have the same numbers" << endl;    
+    }
+    for (int i = 0; i < n; ++i)
+            cout << arr[i] << " ";  
+    return 0; 
 }
