@@ -2,9 +2,9 @@
   
 using namespace std;  
   
-int getFirstDigit(int n); 
-int productOfDigits(int n);  
-void swap(int &a, int &b); 
+//int getFirstDigit(int n); 
+//int productOfDigits(int n);  
+//void swap(int &a, int &b); 
   
   
 int main()  
