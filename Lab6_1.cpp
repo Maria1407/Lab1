@@ -9,18 +9,18 @@ int main()
     int temp = 0, num1 = 0, num2 = 0; 
     bool flag = false; 
  
-    const int n = 6;  
-    int arr[n] {}; 
+    const int N = 10000;  
+    int arr[N] {};
+
+    int n;
+    std::cin >> n; 
  
     for (int i = 0; i < n; i++) { 
-        int number; 
-        cin >> number; 
- 
-        arr[i] = number; 
+        cin >> arr[i]; 
     } 
  
     
- 
+ /*
     for (int i = 0; i < n - 1; ++i) 
     { 
         for (int j = 0; j < n - i - 1; ++j) 
@@ -33,14 +33,15 @@ int main()
             } 
         } 
     } 
+    */
  
      
      
     for (int i = 0; i < n - 1; ++i) 
     { 
-        for (int j = 0; j < n - 1; ++j) 
+        for (int j = i+1; j < n; ++j) 
         { 
-            if (arr[j] == arr[j+1]) 
+            if (arr[i] == arr[j]) 
             { 
                 flag = true; 
                 break; 
@@ -49,9 +50,9 @@ int main()
     } 
     cout << "\n"; 
     if (flag) { 
-        for (int i = 0; i < n - 1; ++i) 
+        for (int i = 0; i < n; ++i) 
         { 
-            for (int j = 0; j < n - 1; ++j) 
+            for (int j = 0; j < n-1; ++j) 
             { 
                 num1 = arr[j] % 10; 
                 num2 = arr[j+1] % 10; 

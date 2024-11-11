@@ -1,27 +1,16 @@
 #include <iostream>
+#include "func.hpp"
 
 using namespace std;
 
 
-bool isPrime(int num) {
-    if (num < 2) return false;
-    for (int i = 2; i <= sqrt(num); ++i) {
-        if (num % i == 0) return false;
-    }
-    return true;
-}
-
-
 int main()
 {
-    const int n=5;
-    const int m=5;
-    int matrix[n][m];
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < m; j++){
-            cin >> matrix[i][j];
-        }
-    }
+    int matrix[mt::N][mt::M];
+    int n, m;
+
+    // Read
+    mt::Read(matrix, n, m);
 
     bool hasIdenticalRows = false;
     for (int i = 0; i < n; ++i) {
@@ -48,7 +37,7 @@ int main()
 
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) {
-                if (isPrime(matrix[i][j]) && matrix[i][j] > maxPrime) {
+                if (mt::isPrime(matrix[i][j]) && matrix[i][j] > maxPrime) {
                     maxPrime = matrix[i][j];
                 }
             }
