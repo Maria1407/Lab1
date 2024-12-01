@@ -9,7 +9,7 @@ using namespace std;
   
 int main()  
 { 
-    int summ = 0, min_sum = 1000000, column = -1; 
+    int summ = 0, min_sum = INT_MAX, column = -1; 
     const int n=3; 
     const int m=3; 
     int arr[n][m]; 
