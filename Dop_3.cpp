@@ -57,8 +57,7 @@ int main()
             }
             
             for (int j = n; j > i; j--) 
-                mas[j] = mas[j - 1];  
-            mas[i + 1] = mas[i]; 
+                mas[j] = mas[j - 1];   
             n++; 
             i++; 
         }  

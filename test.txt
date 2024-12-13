@@ -1,3 +1,0 @@
-This is a simple example sentence to test the functionality of the program. 
-It includes words like apple, hello, and banana. 
-Some words may repeat. Additionally, we will find words with letters used more than three times such as "committee" and "balloon".
