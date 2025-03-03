@@ -2,7 +2,7 @@
 #define N_Max 1000
 
 class BigInt{
-    char m_value[1000];
+    unsigned char m_value[1000];
     short m_size = 0;
 
     public:
@@ -18,6 +18,7 @@ class BigInt{
     }
 
     BigInt& operator+=(const BigInt& other) {
+        m_size = std::max(m_size, other.m_size);
         for(int i=0;i<m_size;i++) {
             m_value[i] += other.m_value[i];
             if(m_value[i] > 9) {
@@ -28,6 +29,7 @@ class BigInt{
                
             }
         }
+        std::cout << m_size << std::endl;
         return *this;
     }
 
@@ -125,6 +127,7 @@ std::ostream& operator<<(std::ostream& out, const BigInt& other) { // опера
     for(int i=0; i<other.m_size; i++) {
         out << static_cast<short>(other.m_value[other.m_size - i - 1]);
     }
+    out << " " << other.m_size;
     return out;
 }
 
@@ -158,6 +161,8 @@ int main() {
 
     x += y;
     std::cout << "x += y: x = " << x << std::endl;
+
+    std::cout << x << " " << y << std::endl;
 
     x *= y;
     std::cout << "x *= y: x = " << x << std::endl;
